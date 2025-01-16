@@ -5,9 +5,13 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
+// Models
+const User = require('./models/User');
+
 const app = express();
 // Config Json responde
-app.use(express.json());
+app.use(express.json())
+
 
 app.get("/", (req, res) => {
 	res.status(200).json({ msg: " Bem vindo a nossa API" });
@@ -20,6 +24,12 @@ app.post('/auth/register', async(req, res) => {
     // validação 
     if(!name){
         return res.status(422).json({msg: 'O nome é obrigatório'});
+    }
+    if(!email){
+        return res.status(422).json({msg: 'O email é obrigatório'});
+    }
+    if(!password){
+        return res.status(422).json({msg: 'A senha é obrigatório'});
     }
 })
 
