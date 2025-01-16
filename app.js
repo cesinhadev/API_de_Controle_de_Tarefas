@@ -6,10 +6,24 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const app = express();
+// Config Json responde
+app.use(express.json());
 
 app.get("/", (req, res) => {
 	res.status(200).json({ msg: " Bem vindo a nossa API" });
 });
+
+//Register user
+app.post('/auth/register', async(req, res) => {
+    const{ name, email, password, confirmpassword } = req.body;
+
+    // validação 
+    if(!name){
+        return res.status(422).json({msg: 'O nome é obrigatório'});
+    }
+})
+
+
 
 //Cretenciais
 const dbUser = process.env.DB_USER 
