@@ -5,14 +5,14 @@ Este projeto é uma API desenvolvida em Node.js, utilizando o framework Express 
 ## Funcionalidades
 
 - **Autenticação**:
-  - Registro de novos usuários.
-  - Login de usuários existentes.
+  - [x] Registro de novos usuários.
+  - [x] Login de usuários existentes.
 
 - **Gerenciamento de Usuários**:
-  - Operações CRUD (Criar, Ler, Atualizar, Excluir) para usuários.
+  - [x] Operações CRUD (Criar, Ler, Atualizar, Excluir) para usuários.
 
 - **Tratamento de Erros**:
-  - Middleware dedicado para capturar e lidar com erros de forma centralizada.
+  - [x] Middleware dedicado para capturar e lidar com erros de forma centralizada.
 
 ## Tecnologias Utilizadas
 
